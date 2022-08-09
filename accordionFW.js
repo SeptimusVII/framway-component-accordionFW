@@ -19,10 +19,12 @@ module.exports = function(app){
         if(acc.deployall || acc.disable)
             acc.deployItem(acc.$items);
 
-        acc.$el.find('.accordionFW__title').on('click',function(){
-            if(acc.autocollapse)
-                acc.collapseItem(acc.$items.not($(this).closest('.accordionFW__item')));
-            acc.toggleItem($(this).closest('.accordionFW__item'));
+        acc.$el.find('.accordionFW__title').on('click',function(e){
+            if (!$(e.target).attr('href') && !$(e.target).parent().attr('href') ){
+                if(acc.autocollapse)
+                    acc.collapseItem(acc.$items.not($(this).closest('.accordionFW__item')));
+                acc.toggleItem($(this).closest('.accordionFW__item'));
+            }      
         })
 
         acc.$items.each(function(index,item){
