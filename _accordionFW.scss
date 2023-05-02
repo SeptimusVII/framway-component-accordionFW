@@ -4,7 +4,7 @@
   }
 }
 
-.accordionFW{ margin-bottom: $spacing; background-color: color(white); @extend %paper !optional;
+.accordionFW{ margin-bottom: $spacing; background-color: color(white); @include paper();
   &[data-disable="true"]{@extend %lock;}
 }
 .accordionFW__item{ border-bottom: 1px solid rgba(color(black),0.2);

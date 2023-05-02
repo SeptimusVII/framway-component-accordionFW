@@ -2,8 +2,8 @@ module.exports = function(app){
     var AccordionFW = Object.getPrototypeOf(app).AccordionFW = new app.Component("accordionFW");
     //AccordionFW.debug = true;
     AccordionFW.createdAt      = "2.0.0";
-    AccordionFW.lastUpdate     = "2.0.0";
-    AccordionFW.version        = "1";
+    AccordionFW.lastUpdate     = "2.2.1";
+    AccordionFW.version        = "1.0.1";
     // AccordionFW.factoryExclude = true;
     // AccordionFW.loadingMsg     = "This message will display in the console when component will be loaded.";
     // AccordionFW.requires       = [];
