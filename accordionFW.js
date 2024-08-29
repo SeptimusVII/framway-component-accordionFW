@@ -2,8 +2,8 @@ module.exports = function(app){
     var AccordionFW = Object.getPrototypeOf(app).AccordionFW = new app.Component("accordionFW");
     //AccordionFW.debug = true;
     AccordionFW.createdAt      = "2.0.0";
-    AccordionFW.lastUpdate     = "2.2.1";
-    AccordionFW.version        = "1.0.1";
+    AccordionFW.lastUpdate     = "2.5.1";
+    AccordionFW.version        = "1.1.0";
     // AccordionFW.factoryExclude = true;
     // AccordionFW.loadingMsg     = "This message will display in the console when component will be loaded.";
     // AccordionFW.requires       = [];
@@ -34,7 +34,7 @@ module.exports = function(app){
     }
 
     AccordionFW.prototype.onResize = function(){
-        this.resizeItem(this.$items);
+        // this.resizeItem(this.$items);
     };
 
     AccordionFW.prototype.toggleItem = function($items){
@@ -51,12 +51,12 @@ module.exports = function(app){
 
     AccordionFW.prototype.deployItem = function($item){
         $item.addClass('active');
-        this.resizeItem($item);
+        // this.resizeItem($item);
         return this;
     }
     AccordionFW.prototype.collapseItem = function($item){
         $item.removeClass('active');
-        this.resizeItem($item);
+        // this.resizeItem($item);
         return this;
     }
     AccordionFW.prototype.resizeItem = function($items){
